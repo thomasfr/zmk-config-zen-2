@@ -41,7 +41,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 )
 ZMK_BEHAVIOR(tdspace, tap_dance,
         tapping-term-ms = <200>;
-        bindings = <&eol_question>, <&eol_dot>, <&eol_exclamation>;
+        bindings = <&kp SPACE>, <&eol_dot>, <&eol_exclamation>, <&eol_question>;
 )
 // tap: backspace | shift + tap: delete | hold: num layer
 ZMK_BEHAVIOR(bs_del_num, mod_morph,
@@ -52,7 +52,7 @@ ZMK_BEHAVIOR(bs_del_num, mod_morph,
 ZMK_BEHAVIOR(eol_question, macro,
     wait-ms = <100>;
     tap-ms = <5>;
-    bindings = <&mt QUESTION SPACE>;
+    bindings = <&kp QUESTION &kp SPACE>;
 )
 ZMK_BEHAVIOR(eol_exclamation, macro,
     wait-ms = <100>;
