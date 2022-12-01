@@ -39,12 +39,10 @@ ZMK_BEHAVIOR(hrm, hold_tap,
         global-quick-tap;
         bindings = <&kp>, <&kp>;
 )
-//ZMK_BEHAVIOR(td, tap_dance,
-//        tapping-term-ms = <150>;
-        //quick_tap_ms = <0>;
-        //flavor = "tap-preferred";
-//        bindings = <&kp>, <&kp>;
-//)
+ZMK_BEHAVIOR(tdspace, tap_dance,
+        tapping-term-ms = <200>;
+        bindings = <&mt QUESTION SPACE>, <&kp DOT>, <&kp EXCLAMATION>;
+)
 // tap: backspace | shift + tap: delete | hold: num layer
 ZMK_BEHAVIOR(bs_del_num, mod_morph,
     bindings = <&lt NUM BSPC>, <&kp DEL>;
@@ -57,9 +55,9 @@ ZMK_LAYER(Default,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &kp I         &kp S         &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &kp A         &kp O         &kp C_PLAY_PAUSE
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp SLASH     &kp DOT       &kp X         &kp K_MUTE
+          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp FSLH      &kp DOT       &kp X         &kp K_MUTE
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &kp LSHFT     &hrm LC(LS(LALT)) LCTRL  &kp ENTER         &kp SPACE     &kp LS(LC(LA(LCMD))) &to SYM
+                                                    &kp LSHFT     &mt LC(LS(LALT)) LCTRL &kp ENTER &tdspace     &kp LS(LC(LA(LCMD))) &to SYM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 ZMK_LAYER(Symbol,
@@ -68,9 +66,9 @@ ZMK_LAYER(Symbol,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &kp I         &kp S         &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &kp A         &kp O         &kp C_PLAY_PAUSE
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp SLASH     &kp DOT       &kp X         &kp K_MUTE
+          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp FSLH      &kp DOT       &kp X         &kp K_MUTE
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &to DEF       &hrm LC(LS(LALT)) LCTRL  &kp ENTER         &kp SPACE     &kp LS(LC(LA(LCMD))) &to NAV
+                                                    &to DEF       &mt LC(LS(LALT)) LCTRL &kp ENTER &tdspace     &kp LS(LC(LA(LCMD))) &to NAV
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 ZMK_LAYER(Navigation,
@@ -79,9 +77,9 @@ ZMK_LAYER(Navigation,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &kp I         &kp S         &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &kp A         &kp O         &kp C_PLAY_PAUSE
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp SLASH     &kp DOT       &kp X         &kp K_MUTE
+          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp FSLH      &kp DOT       &kp X         &kp K_MUTE
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &to DEF       &hrm LC(LS(LALT)) LCTRL  &kp ENTER         &kp SPACE     &kp LS(LC(LA(LCMD))) &to NUM
+                                                    &to DEF       &mt LC(LS(LALT)) LCTRL &kp ENTER &tdspace     &kp LS(LC(LA(LCMD))) &to NUM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 ZMK_LAYER(Number,
@@ -90,8 +88,8 @@ ZMK_LAYER(Number,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &kp I         &kp S         &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &kp A         &kp O         &kp C_PLAY_PAUSE
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp SLASH     &kp DOT       &kp X         &kp K_MUTE
+          &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp FSLH      &kp DOT       &kp X         &kp K_MUTE
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &to DEF       &hrm LC(LS(LALT)) LCTRL  &kp ENTER         &kp SPACE     &kp LS(LC(LA(LCMD))) &to DEF
+                                                    &to DEF       &mt LC(LS(LALT)) LCTRL &kp ENTER &tdspace     &kp LS(LC(LA(LCMD))) &to DEF
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
