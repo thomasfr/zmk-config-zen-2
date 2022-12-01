@@ -41,12 +41,28 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 )
 ZMK_BEHAVIOR(tdspace, tap_dance,
         tapping-term-ms = <200>;
-        bindings = <&mt QUESTION SPACE>, <&kp DOT>, <&kp EXCLAMATION>;
+        bindings = <&mt &eol_question SPACE>, <&kp &eol_dot>, <&kp &eol_exclamation>;
 )
 // tap: backspace | shift + tap: delete | hold: num layer
 ZMK_BEHAVIOR(bs_del_num, mod_morph,
     bindings = <&lt NUM BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+// windows sleep macro
+ZMK_BEHAVIOR(eol_question, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp QUESTION &kp SPACE>;
+)
+ZMK_BEHAVIOR(eol_exclamation, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp EXCLAMATION &kp SPACE>;
+)
+ZMK_BEHAVIOR(eol_dot, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp DOT &kp SPACE>;
 )
 
 ZMK_LAYER(Default,
