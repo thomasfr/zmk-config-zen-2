@@ -39,14 +39,6 @@ ZMK_BEHAVIOR(hrm, hold_tap,
         global-quick-tap;
         bindings = <&kp>, <&kp>;
 )
-
-ZMK_BEHAVIOR(hyper, hold_tap,
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp LC(LS(LALT))>, <&kp>;
-)
 ZMK_BEHAVIOR(td, tap_dance,
         tapping-term-ms = <150>;
         quick_tap_ms = <0>;
@@ -67,7 +59,7 @@ ZMK_LAYER(Default,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp SLASH     &kp DOT       &kp X         &kp K_MUTE
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &kp LSHFT     &hyper LCTRL  &kp ENTER         &kp SPACE     &kp LS(LC(LA(LCMD))) &to SYM
+                                                    &kp LSHFT     &hrm LC(LS(LALT)) LCTRL  &kp ENTER         &kp SPACE     &kp LS(LC(LA(LCMD))) &to SYM
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 ZMK_LAYER(Symbol,
