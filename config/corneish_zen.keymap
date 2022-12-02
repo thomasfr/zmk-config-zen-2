@@ -58,6 +58,11 @@ ZMK_BEHAVIOR(spc_dt_hpr, tap_dance,
         tapping-term-ms = <200>;
         bindings = <&mt HYPER SPACE>, <&kp DOT>;
 )
+// tap: none | double-tap: reset | tripple-tap: bootloader
+ZMK_BEHAVIOR(rst_bootloader, tap_dance,
+        tapping-term-ms = <150>;
+        bindings = <&none>, <&reset>, <&bootloader>;
+)
 // tap: Play/Pause | double-tap: Next
 ZMK_BEHAVIOR(play_pause_next, tap_dance,
         tapping-term-ms = <200>;
@@ -112,7 +117,7 @@ ZMK_LAYER(Navigation,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       XXX         &hrm LCTRL LEFT &hrm LALT DOWN &hrm LCMD RIGHT  XXX           XXX         &hrm LCMD LEFT &hrm LALT DOWN &hrm LCTRL RIGHT XXX      &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &sk LSHFT     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX         &vol_mute_up_down
+          &sk LSHFT     XXX           XXX           XXX           XXX         &rst_bootloader   &rst_bootloader XXX           XXX           XXX           XXX         &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &sk LCMD      &to 0         &spc_dt_hpr       &kp ENTER     &to 3         &sk LCTRL 
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
