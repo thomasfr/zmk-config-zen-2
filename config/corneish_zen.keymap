@@ -50,12 +50,12 @@
     combos {
         compatible = "zmk,combos";
         combo_copy {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <LM3 LM2>;
             bindings = <&kp LG(C)>;
         };
         combo_paste {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <LM2 LM1>;
             bindings = <&kp LG(V)>;
         };
@@ -65,19 +65,19 @@
 //ZMK_UNICODE_SINGLE(euro, N2, N0, A, C)  // €
 ZMK_BEHAVIOR(hrm, hold_tap,
         flavor = "balanced";
-        tapping-term-ms = <280>;
+        tapping-term-ms = <250>;
         quick-tap-ms = <125>;
         global-quick-tap;
         bindings = <&kp>, <&kp>;
 )
 // tap: space | double-tap: dot | hold: HYPER
 ZMK_BEHAVIOR(spc_dt_hpr, tap_dance,
-        tapping-term-ms = <200>;
+        tapping-term-ms = <180>;
         bindings = <&mt HYPER SPACE>, <&kp DOT>;
 )
 // tap: none | double-tap: reset | tripple-tap: bootloader
 ZMK_BEHAVIOR(rst_bootloader, tap_dance,
-        tapping-term-ms = <150>;
+        tapping-term-ms = <200>;
         bindings = <&none>, <&reset>, <&bootloader>;
 )
 // tap: Play/Pause | double-tap: Next
@@ -109,7 +109,7 @@ ZMK_LAYER(Default,
 )
 ZMK_LAYER(Symbol,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp ESC      &kp LS(LA(2))  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &bs_del       &to NAV
+          &kp ESC      &kp LS(LA(N2)) &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &bs_del       &to NAV
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &kp SEMI    &hrm LCTRL PLUS &hrm LALT MINUS &hrm LCMD DQT &kp EXCL         &kp SLASH   &hrm LCMD LBRC &hrm LALT RBRC &hrm LCTRL PIPE &kp LT     &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
