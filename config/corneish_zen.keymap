@@ -53,27 +53,6 @@ ZMK_BEHAVIOR(hrm, hold_tap,
         global-quick-tap;
         bindings = <&kp>, <&kp>;
 )
-ZMK_BEHAVIOR(ctrl, hold_tap,
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp LCTRL>, <&kp>;
-)
-ZMK_BEHAVIOR(opt, hold_tap,
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp LALT>, <&kp>;
-)
-ZMK_BEHAVIOR(cmd, hold_tap,
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp LCMD>, <&kp>;
-)
 // tap: space | double-tap: dot | hold: HYPER
 ZMK_BEHAVIOR(spc_dt_hpr, tap_dance,
         tapping-term-ms = <200>;
