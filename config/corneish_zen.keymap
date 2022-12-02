@@ -46,8 +46,8 @@
      quick-tap-ms = <QUICK_TAP_MS>;
 };
 
-ZMK_COMBO(copy,  &kp LG(C), LM3 LM2, DEF SYM)
-ZMK_COMBO(paste, &kp LG(V), LM2 LM1, DEF SYM)
+ZMK_COMBO(copy,  &kp LG(C), LM3 LM2, ALL)
+ZMK_COMBO(paste, &kp LG(V), LM2 LM1, ALL)
 
 ZMK_UNICODE_SINGLE(euro, N2, N0, A, C)  // €
 ZMK_BEHAVIOR(hrm, hold_tap,
