@@ -62,7 +62,7 @@
     };
 };
 
-ZMK_UNICODE_SINGLE(euro, N2, N0, A, C)  // €
+//ZMK_UNICODE_SINGLE(euro, N2, N0, A, C)  // €
 ZMK_BEHAVIOR(hrm, hold_tap,
         flavor = "balanced";
         tapping-term-ms = <280>;
@@ -109,7 +109,7 @@ ZMK_LAYER(Default,
 )
 ZMK_LAYER(Symbol,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp ESC       &euro         &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &bs_del       &to NAV
+          &kp ESC      &kp LS(LA(2))  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &bs_del       &to NAV
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &kp SEMI    &hrm LCTRL PLUS &hrm LALT MINUS &hrm LCMD DQT &kp EXCL         &kp SLASH   &hrm LCMD LBRC &hrm LALT RBRC &hrm LCTRL PIPE &kp LT     &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
