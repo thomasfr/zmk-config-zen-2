@@ -110,7 +110,7 @@ ZMK_LAYER(Symbol,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp ESC       &euro         &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &bs_del_num   &to NUM
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TAB       &kp SEMI    &hrm LCTR PLUS &hrm LALT MINUS &hrm LCMD DQT &kp EXCL         &kp SLASH   &hrm LCMD LBRC &hrm LALT RBRC &hrm LCTRL PIP &kp LT      &play_pause_next
+          &kp TAB       &kp SEMI    &hrm LCTR PLUS &hrm LALT MINUS &hrm LCMD DQT &kp EXCL         &kp SLASH   &hrm LCMD LBRC &hrm LALT RBRC &hrm LCTRL PIPE &kp LT     &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &sk LSHFT     &kp COLON     &kp EQUAL     &kp UNDER     &kp SQT       &kp QMARK         &kp STAR      &kp LPAR      &kp RPAR      &kp BSLH      &kp GT       &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
