@@ -99,20 +99,20 @@ ZMK_LAYER(Default,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp ESC       &kp Y         &kp C         &kp L         &kp M         &kp K             &kp Z         &kp F         &kp U         &kp COMMA     &bs_del_num   &to NUM
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TAB       &kp I         &hrm LCTRL S  &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &hrm LCTRL A  &kp O         &play_pause_next
+          &kp TAB       &kp I         &hrm LCTRL S  &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &hrm LCTRL A  &kp O        &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &sk LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp FSLH      &kp DOT       &kp X         &vol_mute_up_down
+          &sk LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp FSLH      &kp DOT       &kp X        &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &sk LCMD      &sk LSHIFT    &spc_dt_hpr       &kp ENTER     &to 1         &sk LCTRL 
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 ZMK_LAYER(Symbol,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp ESC       &kp euro      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &bs_del_num   &to NUM
+          &kp ESC       &euro         &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &bs_del_num   &to NUM
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TAB       &kp SEMI     &ctrl PLUS     &opt MINUS    &cmd DQT      &kp EXCL          &kp SLASH     &cmd LBRC     &opt RBRC     &ctrl PIPE    &kp LT        &play_pause_next
+          &kp TAB       &kp SEMI      &ctrl PLUS    &opt MINUS    &cmd DQT      &kp EXCL          &kp SLASH     &cmd LBRC     &opt RBRC     &ctrl PIPE    &kp LT       &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &sk LSHFT     &kp COLON     &kp EQUAL     &kp UNDER     &kp SQT       &kp QMARK         &kp STAR      &kp LPAR      &kp RPAR      &kp BSLH      &kp GT        &vol_mute_up_down
+          &sk LSHFT     &kp COLON     &kp EQUAL     &kp UNDER     &kp SQT       &kp QMARK         &kp STAR      &kp LPAR      &kp RPAR      &kp BSLH      &kp GT       &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &sk LCMD      &to 0         &spc_dt_hpr       &kp ENTER     &to 2         &sk LCTRL 
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -121,9 +121,9 @@ ZMK_LAYER(Navigation,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp ESC       &kp XXX       &kp XXX       &kp UP        &kp XX X      &kp XXX           &kp XXX       &kp XXX       &kp UP        &kp XXX       &bs_del_num   &to NUM
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TAB       &kp XXX       &kp LEFT      &kp DOWN      &kp RIGHT     &kp XXX           &kp XXX       &kp LEFT      &kp DOWN      &kp RIGHT     &kp XXX       &play_pause_next
+          &kp TAB       &kp XXX       &kp LEFT      &kp DOWN      &kp RIGHT     &kp XXX           &kp XXX       &kp LEFT      &kp DOWN      &kp RIGHT     &kp XXX      &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &sk LSHFT     &kp XXX       &kp XXX       &kp XXX       &kp XXX       &kp XXX           &kp XXX       &kp XXX       &kp XXX      &kp XXX        &kp XXX       &vol_mute_up_down
+          &sk LSHFT     &kp XXX       &kp XXX       &kp XXX       &kp XXX       &kp XXX           &kp XXX       &kp XXX       &kp XXX      &kp XXX        &kp XXX      &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                     &sk LCMD      &to 0         &spc_dt_hpr       &kp ENTER     &to 3         &sk LCTRL 
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
