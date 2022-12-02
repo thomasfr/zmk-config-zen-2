@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 //#include <dt-bindings/zmk/mouse.h>
 
-#define HOST_OS 2 // macOS
+//#define HOST_OS 2 // macOS
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
@@ -22,8 +22,6 @@
 #define HYPER  LS(LC(LA(LCMD)))
 #define MEH    LS(LC(LALT))
 
-/ { chosen { zmk,matrix_transform = &default_transform; }; };
-
 &mt {
      flavor = "tap-preferred";
      tapping_term_ms = <220>;
@@ -33,21 +31,36 @@
 
 &sk {  // sticky-key config
      release-after-ms = <1000>;  // release after 0.6s
-     quick-release;             // no double capitalization when rolling keys
+     quick-release;              // no double capitalization when rolling keys
 };
 
 //&sl {  // sticky-layer config
 //     ignore-modifiers;
 //};
+//&lt {  // layer-tap config
+//     flavor = "balanced";
+//     tapping-term-ms = <200>;
+//     quick-tap-ms = <QUICK_TAP_MS>;
+//};
 
-&lt {  // layer-tap config
-     flavor = "balanced";
-     tapping-term-ms = <200>;
-     quick-tap-ms = <QUICK_TAP_MS>;
+//ZMK_COMBO(copy,  &kp LG(C), LM3 LM2, ALL)
+//ZMK_COMBO(paste, &kp LG(V), LM2 LM1, ALL)
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <LM3 LM2>;
+            bindings = <&kp LG(C)>;
+        };
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <LM2 LM1>;
+            bindings = <&kp LG(V)>;
+        };
+    };
 };
-
-ZMK_COMBO(copy,  &kp LG(C), LM3 LM2, ALL)
-ZMK_COMBO(paste, &kp LG(V), LM2 LM1, ALL)
 
 ZMK_UNICODE_SINGLE(euro, N2, N0, A, C)  // €
 ZMK_BEHAVIOR(hrm, hold_tap,
@@ -127,3 +140,5 @@ ZMK_LAYER(Number,
                                                     &sk LCMD      &to 0         &spc_dt_hpr       &kp ENTER     &to 1         &sk LCTRL 
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
+
+/ { chosen { zmk,matrix_transform = &default_transform; }; };
