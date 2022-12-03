@@ -6,8 +6,7 @@
 //#define HOST_OS 2 // macOS
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
-
+//#include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 #define XXX &none
 #define ___ &trans
@@ -16,8 +15,6 @@
 #define SYM 1
 #define NAV 2
 #define NUM 3
-
-#define QUICK_TAP_MS 175
 
 #define HYPER  LS(LC(LA(LCMD)))
 #define MEH    LS(LC(LALT))
@@ -30,39 +27,26 @@
 };
 
 &sk {  // sticky-key config
-     release-after-ms = <1000>;  // release after 0.6s
+     release-after-ms = <1000>;  // release after 1s
      quick-release;              // no double capitalization when rolling keys
 };
-
-//&sl {  // sticky-layer config
-//     ignore-modifiers;
-//};
-//&lt {  // layer-tap config
-//     flavor = "balanced";
-//     tapping-term-ms = <200>;
-//     quick-tap-ms = <QUICK_TAP_MS>;
-//};
-
-//ZMK_COMBO(copy,  &kp LG(C), LM3 LM2, ALL)
-//ZMK_COMBO(paste, &kp LG(V), LM2 LM1, ALL)
 
 / {
     combos {
         compatible = "zmk,combos";
         combo_copy {
-            timeout-ms = <80>;
+            timeout-ms = <90>;
             key-positions = <LM3 LM2>;
             bindings = <&kp LG(C)>;
         };
         combo_paste {
-            timeout-ms = <80>;
+            timeout-ms = <90>;
             key-positions = <LM2 LM1>;
             bindings = <&kp LG(V)>;
         };
     };
 };
 
-//ZMK_UNICODE_SINGLE(euro, N2, N0, A, C)  // €
 ZMK_BEHAVIOR(hrm, hold_tap,
         flavor = "balanced";
         tapping-term-ms = <250>;
@@ -72,7 +56,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 )
 // tap: space | double-tap: dot | hold: HYPER
 ZMK_BEHAVIOR(spc_dt_hpr, tap_dance,
-        tapping-term-ms = <180>;
+        tapping-term-ms = <150>;
         bindings = <&mt HYPER SPACE>, <&kp DOT>;
 )
 // tap: none | double-tap: reset | tripple-tap: bootloader
