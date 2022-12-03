@@ -98,12 +98,12 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
 // tap: O | CMD + O: Backspace
 ZMK_BEHAVIOR(o_cmd_bsp, mod_morph,
     bindings = <&kp O>, <&kp BSPC>;
-    mods = <LCMD>;
+    mods = <MOD_LCMD>;
 )
 // tap: O | CMD + O: Backspace
 ZMK_BEHAVIOR(cmd_tab, mod_morph,
     bindings = <&kp TAB>, <&kt LCMD>;
-    mods = <LCMD>;
+    mods = <MOD_LCMD>;
 )
 
 ZMK_LAYER(Default,
