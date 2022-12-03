@@ -104,6 +104,7 @@ ZMK_BEHAVIOR(o_cmd_bsp, mod_morph,
 ZMK_BEHAVIOR(cmd_tab, mod_morph,
     bindings = <&kp TAB>, <&kt LCMD>;
     mods = <(MOD_LGUI|MOD_RGUI)>;
+    keep-mods = <(MOD_LGUI)>;
 )
 
 ZMK_LAYER(Default,
