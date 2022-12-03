@@ -100,18 +100,12 @@ ZMK_BEHAVIOR(o_cmd_bsp, mod_morph,
     bindings = <&kp O>, <&kp BSPC>;
     mods = <(MOD_LGUI|MOD_RGUI)>;
 )
-// tap: O | CMD + O: Backspace
-ZMK_BEHAVIOR(cmd_tab, mod_morph,
-    bindings = <&kp TAB>, <&kt LCMD>;
-    mods = <(MOD_LGUI|MOD_RGUI)>;
-    keep-mods = <(MOD_LGUI)>;
-)
 
 ZMK_LAYER(Default,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp ESC       &kp Y         &kp C         &kp L         &kp M         &kp K             &kp Z         &kp F         &kp U       &mt SEMI COMMA  &mt DQT SQT &to NAV
+          &kp ESC       &kp Y         &kp C         &kp L         &kp M         &kp K             &kp Z         &kp F         &kp U       &mt SEMI COMMA  &kp SQT     &to NAV
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &cmd_tab      &kp I         &hrm LCTRL S  &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &hrm LCTRL A  &o_cmd_bsp    &play_pause_next
+          &kp TAB       &kp I         &hrm LCTRL S  &hrm LALT R   &hrm LCMD T   &kp G             &kp P         &hrm LCMD N   &hrm LALT E   &hrm LCTRL A  &o_cmd_bsp  &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &sk LSHFT     &kp Q         &kp V         &kp W         &kp D         &kp J             &kp B         &kp H         &kp FSLH    &mt COLON DOT   &kp X       &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -122,7 +116,7 @@ ZMK_LAYER(Symbol,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp ESC      &kp LS(LA(N2)) &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT       &kp TILDE     &kp LBKT      &kp RBKT      &kp AMPS      &kp LT      &to NAV
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &cmd_tab      &kp SEMI    &hrm LCTRL PLUS &hrm LALT MINUS &hrm LCMD DQT &kp EXCL         &kp SLASH   &hrm LCMD LBRC &hrm LALT RBRC &hrm LCTRL PIPE &bs_del  &play_pause_next
+          &kp TAB       &kp SEMI    &hrm LCTRL PLUS &hrm LALT MINUS &hrm LCMD DQT &kp EXCL         &kp SLASH   &hrm LCMD LBRC &hrm LALT RBRC &hrm LCTRL PIPE &bs_del  &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &sk LSHFT     &kp COLON     &kp EQUAL     &kp UNDER     &kp SQT       &kp QMARK         &kp STAR      &kp LPAR      &kp RPAR      &kp BSLH      &kp GT      &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -133,7 +127,7 @@ ZMK_LAYER(Navigation,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp ESC       XXX           XXX           &kp UP        XXX           XXX               XXX           XXX           &kp UP        XXX           XXX         &to NAV
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &cmd_tab      XXX         &hrm LCTRL LEFT &hrm LALT DOWN &hrm LCMD RIGHT  XXX           XXX         &hrm LCMD LEFT &hrm LALT DOWN &hrm LCTRL RIGHT &bs_del  &play_pause_next
+          &kp TAB       XXX         &hrm LCTRL LEFT &hrm LALT DOWN &hrm LCMD RIGHT  XXX           XXX         &hrm LCMD LEFT &hrm LALT DOWN &hrm LCTRL RIGHT &bs_del  &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &sk LSHFT     XXX           XXX           XXX           XXX         &rst_bootloader   &rst_bootloader XXX           XXX           XXX           XXX         &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -144,7 +138,7 @@ ZMK_LAYER(Number,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp ESC      &kp KP_DIVIDE  &kp N7        &kp N8        &kp N9        &kp KP_MINUS      &kp K_MUTE    &kp C_VOL_DN &kp C_VOL_UP   XXX           XXX         &to NAV
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &cmd_tab      &kp KP_MULTIPLY &kp N4       &kp N5        &kp N6        &kp KP_PLUS       &kp C_PP      &kp C_PREV    &kp C_NEXT    XXX           &bs_del     &play_pause_next
+          &kp TAB      &kp KP_MULTIPLY &kp N4       &kp N5        &kp N6        &kp KP_PLUS       &kp C_PP      &kp C_PREV    &kp C_NEXT    XXX           &bs_del     &play_pause_next
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &sk LSHFT     &kp N0        &kp N1        &kp N2        &kp N3        &kp KP_EQUAL      XXX           &kp C_BRI_DN  &kp C_BRI_UP  XXX           XXX         &vol_mute_up_down
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
